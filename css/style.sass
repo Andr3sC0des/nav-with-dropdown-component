@@ -1,0 +1,80 @@
+$family: "poppins", sans-serif
+$bg: #e9ebef
+$nav-bg: #ffffff
+$color: #2e2e2e
+
+
+* 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: $family
+
+
+html
+    font-size: 12px
+
+.navcon
+    display: flex
+
+body
+    background: $bg
+
+.nav
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 2px 2px 5px #999
+    border-radius: 1rem
+    height: 100vh
+    background: $nav-bg
+
+.list
+    list-style-type: none
+    &__item
+        overflow: hidden
+    &__anchor
+        padding: 1rem 4rem
+        display: block
+        font-size: 1.2rem
+        text-decoration: none
+        color: $color
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &:hover
+            background: #e7e7e7
+    &__image
+        width: 1.7rem
+        margin-right: 1rem
+        align-self: center
+    &__arrow
+        margin-left: 3rem
+        transform: rotate(0deg)
+        transition: transform 1s
+        &--rotate
+            transform: rotate(90deg)
+            transition: transform 1s
+    &__details
+        display: flex
+        justify-content: start
+        align-items: center
+
+.dropdown
+    justify-content: end
+    display: grid
+    height: 0
+    transition: height 0.4s
+    &__item
+        list-style-type: none
+    &__anchor
+        padding: 1rem 4rem
+        text-decoration: none
+        color: $color
+        display: inline-block
+        font-size: 1.2rem
+        border-left: 2px solid $color
+        &:hover
+            background: #e7e7e7
+
